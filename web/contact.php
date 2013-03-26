@@ -15,5 +15,15 @@
 				</div>
 			</ul>
 		</div>
+		<h1><span id="contacth">Contact Us!</span></h1>
+		<div class="contact1">
+			<p>
+				Hey there! Although this game is awesomely epic, there is 
+				still room for improvement. If you have an idea or request to make this 
+				game better send us an email. Don't be shy! You may also contact us to 
+				tell us what you love about the game or if you found a bug! Please feel
+				free to shoot us an email!
+			</p>
+		</div>
 	</body>
-</html>
+</html>		

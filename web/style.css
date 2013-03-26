@@ -92,23 +92,32 @@ img {
 	margin-right: 0px;
 }
 
-#introh {
+.introh {
 	text-align: left;
 }
 
-#intro {
+.intro {
 	margin-left: 60px;
 	max-width: 400px;
 }
 
-#intro2h {
+.intro2h {
 	text-align: right;
 	margin-right: 50px;
 }
 
-#intro2 {
+.intro2 {
 	margin-right: 50px;
 	max-width: 400px;
 	margin-left: auto;
 	text-align: right;
+}
+
+.contacth {
+	text-align: left;
+}
+
+.contact1 {
+	margin-left: 60px;
+	max-width: 400px;
 }
