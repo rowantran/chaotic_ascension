@@ -38,6 +38,10 @@ class Player(pygame.sprite.Sprite):
 			damage = damage * 1.3
 		target.hp -= damage
 		
+	def skill(skillname, target):
+		# Temporary D:
+		exec(skills[skillname])
+
 class Item(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		self.name = "Item"
