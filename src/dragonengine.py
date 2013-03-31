@@ -3,7 +3,7 @@ Name: dragonengine.py
 Version: 0.1
 Author: BishopBlade
 """
-import pygame
+import pygame, random
 class Player(pygame.sprite.Sprite):
 	def __init__(self, inventory):
 		self.inventory = inventory
@@ -32,8 +32,12 @@ class Player(pygame.sprite.Sprite):
 		self.dark = 0
 
 	def attack(self, target):
-		pass
-
+		damage = random.randint(self.watk, self.watk*1.5)
+		crit = random.choice([True, False])
+		if crit:
+			damage = damage * 1.3
+		target.hp -= damage
+		
 class Item(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		self.name = "Item"
