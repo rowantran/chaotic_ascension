@@ -28,11 +28,13 @@ screen = pygame.display.set_mode([1280, 800], FULLSCREEN)
 pygame.display.set_caption("Chaotic Ascension")
 current_map = menuclass
 
+
 def menu():
     screen.blit(menuclass.bg, (0, 0))
     screen.blit(logo, (360, 50))
     screen.blit(header1, (340, 730))
     pygame.display.flip()
+
 
 def tut1():
     screen.blit(tut1class.bg, (0, 0))
@@ -59,8 +61,9 @@ while True:
         menu()
     elif current_map == tut1class:
         tut1()
-    x,y = pygame.mouse.get_pos()
+    x, y = pygame.mouse.get_pos()
     x -= cursor.get_width()/2
     y -= cursor.get_height()/2
     screen.blit(cursor, (x, y))
     pygame.display.flip()
+    

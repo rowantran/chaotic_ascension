@@ -5,7 +5,10 @@ Author: BishopBlade
 
 Base component of framework
 """
-import pygame, random
+import pygame
+import random
+
+
 class Player(pygame.sprite.Sprite):
 	"""
 	A player
