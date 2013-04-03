@@ -5,8 +5,12 @@ Author: BishopBlade
 
 Main executable file for Chaotic Ascension
 """
-import dragonengine, pygame, sys
+import sys
+
+import pygame
 from pygame.locals import *
+
+import dragonengine
 from items import *
 from maps import *
 from monsters import *
