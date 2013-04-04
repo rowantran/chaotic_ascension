@@ -6,6 +6,7 @@ Author: BishopBlade
 Base component of framework
 """
 import random
+import pickle
 
 import pygame
 
@@ -103,3 +104,7 @@ class Monster(pygame.sprite.Sprite):
     def attack(self, target):
         damage = random.randint(self.damage, self.damage*1.3)
         target.hp -= damage
+
+def save(data, savefile):
+    thesave = open("savefile", "wb")
+    
