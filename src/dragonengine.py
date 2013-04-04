@@ -105,6 +105,6 @@ class Monster(pygame.sprite.Sprite):
         damage = random.randint(self.damage, self.damage*1.3)
         target.hp -= damage
 
+
 def save(data, savefile):
     thesave = open("savefile", "wb")
-    

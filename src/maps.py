@@ -1,10 +1,6 @@
 import pygame
 
 
-class MenuClass(pygame.sprite.Sprite):
-    def __init__(self):
-        self.bg = pygame.image.load("art/backgrounds/menu.png")
-        self.id = "Menu"
 
 
 class NewGameClass(pygame.sprite.Sprite):
