@@ -11,13 +11,42 @@ import pickle
 import pygame
 
 
+class Save(pygame.sprite.Sprite):
+    """
+    A savefile
+    """
+    def __init__(self, inventory, x, y, image, current_map):
+        self.inventory = inventory
+        self.image = image
+        self.x = x
+        self.y = y
+        self.hp = 100
+        self.mhp = 100
+        self.mp = 50
+        self.mmp = 50
+        self.watk = 0
+        self.matk = 0
+        self.wdef = 2
+        self.mdef = 2
+        self.avoid = 4
+        self.speed = 5
+        self.fire = 0
+        self.aqua = 0
+        self.lightning = 0
+        self.earth = 0
+        self.light = 0
+        self.dark = 0
+        self.skills = []
+        self.current_map = current_map.id
+
+
 class Player(pygame.sprite.Sprite):
     """
     A player
     """
-    def __init__(self, inventory, x, y):
+    def __init__(self, inventory, x, y, image, current_map, maps):
         self.inventory = inventory
-        self.image = pygame.image.load("player0.png")
+        self.image = pygame.image.load(image)
         self.rect = self.image.get_rect()
         self.rect.left, self.rect.top = x, y
         self.hp = 100
@@ -36,6 +65,10 @@ class Player(pygame.sprite.Sprite):
         self.earth = 0
         self.light = 0
         self.dark = 0
+        self.skills = []
+        for x in maps:
+            if x.id == current_map:
+                self.current_map = x
 
     def attack(self, target):
         damage = random.randint(self.watk, self.watk*1.5)
@@ -44,10 +77,9 @@ class Player(pygame.sprite.Sprite):
             damage = damage * 1.3
         target.hp -= damage
 
-    def skill(skillname, target):
+    def skill(self, skillname, target):
         # Temporary D:
-        exec(skills[skillname])
-
+        exec(self.skills[skillname])
 
 class Item(pygame.sprite.Sprite):
     """
@@ -107,4 +139,14 @@ class Monster(pygame.sprite.Sprite):
 
 
 def save(data, savefile):
-    thesave = open("savefile", "wb")
+    thesave = open(savefile, "wb")
+    pickle.dump(data, thesave, 1)
+    thesave.close()
+
+
+def load(savefile, maps):
+    save = open(savefile, "rb")
+    data = pickle.load(save)
+    player = Player(data.inventory, data.x, data.y, data.image, data.current_map, maps)
+    save.close()
+    return player
