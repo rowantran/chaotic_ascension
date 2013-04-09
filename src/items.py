@@ -37,13 +37,13 @@ class ApprenticeMagiciansRobes(pygame.sprite.Sprite):
     name = "Apprentice Magician's Robes"
     mdef = 1.5
     wdef = 0.2
-    image = pygame.image.load("art/items/robes/apprentice-magicians-robes.png")
+    #image = pygame.image.load("art/items/robes/apprentice-magicians-robes.png")
 
 
 class TraineeRoguesRobes(pygame.sprite.Sprite):
     name = "Trainee Rogue's Robes"
     wdef = 1.25
-    image = pygame.image.load("art/items/robes/trainee-rogues-robes.png")
+    #image = pygame.image.load("art/items/robes/trainee-rogues-robes.png")
 
 
 # SWORDS
@@ -51,7 +51,7 @@ class TraineeRoguesRobes(pygame.sprite.Sprite):
 class TraineeWarriorsSword(pygame.sprite.Sprite):
     name = "Trainee Warrior's Sword"
     watk = 4
-    image = pygame.image.load("art/items/weapons/swords/trainee-warriors-sword.png")
+    #image = pygame.image.load("art/items/weapons/swords/trainee-warriors-sword.png")
 
 
 # SHIELDS
@@ -59,7 +59,7 @@ class TraineeWarriorsSword(pygame.sprite.Sprite):
 class TraineeWarriorsShield(pygame.sprite.Sprite):
     name = "Trainee Warrior's Shield"
     wdef = 1
-    image = pygame.image.load("art/items/shields/trainee-warriors-shield.png")
+    #image = pygame.image.load("art/items/shields/trainee-warriors-shield.png")
 
 
 # WANDS/STAFFS
@@ -67,7 +67,7 @@ class TraineeWarriorsShield(pygame.sprite.Sprite):
 class ApprenticeMagiciansWand(pygame.sprite.Sprite):
     name = "Apprentice Magician's Shield"
     matk = 3
-    image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")
+    #image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")
 
 
 # DAGGERS
@@ -75,4 +75,4 @@ class ApprenticeMagiciansWand(pygame.sprite.Sprite):
 class TraineeRoguesDaggers(pygame.sprite.Sprite):
     name = "Trainee Rogue's Daggers"
     watk = 2.5
-    image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")
+    #image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")

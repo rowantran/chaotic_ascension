@@ -15,8 +15,9 @@ class Save(pygame.sprite.Sprite):
     """
     A savefile
     """
-    def __init__(self, inventory, x, y, image, current_map):
+    def __init__(self, inventory, x, y, image, current_map, pclass):
         self.inventory = inventory
+        self.pclass = pclass
         self.image = image
         self.x = x
         self.y = y
@@ -44,7 +45,7 @@ class Player(pygame.sprite.Sprite):
     """
     A player
     """
-    def __init__(self, inventory, x, y, image, current_map, maps):
+    def __init__(self, inventory, x, y, image, current_map, maps, pclass):
         self.inventory = inventory
         self.image = pygame.image.load(image)
         self.rect = self.image.get_rect()
@@ -65,6 +66,7 @@ class Player(pygame.sprite.Sprite):
         self.earth = 0
         self.light = 0
         self.dark = 0
+        self.pclass = pclass
         self.skills = []
         for x in maps:
             if x.id == current_map:
@@ -147,6 +149,6 @@ def save(data, savefile):
 def load(savefile, maps):
     save = open(savefile, "rb")
     data = pickle.load(save)
-    player = Player(data.inventory, data.x, data.y, data.image, data.current_map, maps)
+    player = Player(data.inventory, data.x, data.y, data.image, data.current_map, maps, data.pclass)
     save.close()
     return player

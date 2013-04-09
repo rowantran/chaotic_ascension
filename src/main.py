@@ -108,7 +108,7 @@ class NewGameClass(pygame.sprite.Sprite):
 
     def create_file(self):
         avatar = False
-        pclass = False
+        pclasschoose = False
         if self.click1 is True:
             image = "art/players/player1.png"
             avatar = True
@@ -117,20 +117,23 @@ class NewGameClass(pygame.sprite.Sprite):
             avatar = True
         if self.cclick1 is True:
             inventory = ["Trainee Warrior's Chestplate", "Trainee Warrior's Leggings", "Trainee Warrior's Sword", "Trainee Warrior's Shield"]
-            pclass = True
+            pclasschoose = True
+            pclass = "Warrior"
         elif self.cclick2 is True:
             inventory = ["Apprentice Magician's Robes", "Apprentice Magician's Wand"]
-            pclass = True
+            pclasschoose = True
+            pclass = "Magician"
         elif self.cclick3 is True:
             inventory = ["Trainee Rogue's Robes", "Trainee Rogue's Daggers"]
-            pclass = True
-        if avatar and pclass:
-            save = dragonengine.Save(inventory, 100, 100, image, tut1)
+            pclasschoose = True
+            pclass = "Rogue"
+        if avatar and pclasschoose:
+            save = dragonengine.Save(inventory, 100, 100, image, tut1, pclass)
             dragonengine.save(save, "file1.sav")
         else:
             if not avatar:
                 print "Please select an avatar!"
-            if not pclass:
+            if not pclasschoose:
                 print "Please select a class!"
 
 
@@ -141,7 +144,6 @@ class LoadGameClass(pygame.sprite.Sprite):
     def play(self):
         global player
         player = dragonengine.load("file1.sav", maps)
-        print player.inventory
 
 
 class Tut1Class(pygame.sprite.Sprite):
@@ -193,6 +195,7 @@ while True:
             elif event.key == pygame.K_RETURN:
                 if current_map == newgame:
                     newgame.create_file()
+
         elif event.type == MOUSEBUTTONDOWN:
             if current_map == menu:
                 x, y = pygame.mouse.get_pos()
