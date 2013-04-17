@@ -14,7 +14,6 @@ from pygame.locals import *
 
 import dragonengine
 from items import *
-from maps import *
 from monsters import *
 
 
