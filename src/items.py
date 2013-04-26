@@ -1,4 +1,4 @@
-"""
+`"""
 Name: items.py
 Version: 0.1
 Author: BishopBlade
@@ -17,7 +17,7 @@ import dragonengine
 
 # UPPER ARMOR
 
-class TraineeWarriorsChestplate(pygame.sprite.Sprite):
+class TraineeWarriorsChestplate(dragonengine.Item):
     name = "Trainee Warrior's Chestplate"
     wdef = 1
     image = pygame.image.load("art/items/upper-armor/trainee-warriors-chestplate.png")
@@ -25,7 +25,7 @@ class TraineeWarriorsChestplate(pygame.sprite.Sprite):
 
 # LOWER ARMOR
 
-class TraineeWarriorsLeggings(pygame.sprite.Sprite):
+class TraineeWarriorsLeggings(dragonengine.Item):
     name = "Trainee Warrior's Leggings"
     wdef = 1
     image = pygame.image.load("art/items/lower-armor/trainee-warriors-leggings.png")
@@ -33,14 +33,14 @@ class TraineeWarriorsLeggings(pygame.sprite.Sprite):
 
 # ROBES
 
-class ApprenticeMagiciansRobes(pygame.sprite.Sprite):
+class ApprenticeMagiciansRobes(dragonengine.Item):
     name = "Apprentice Magician's Robes"
     mdef = 1.5
     wdef = 0.2
     #image = pygame.image.load("art/items/robes/apprentice-magicians-robes.png")
 
 
-class TraineeRoguesRobes(pygame.sprite.Sprite):
+class TraineeRoguesRobes(dragonengine.Item):
     name = "Trainee Rogue's Robes"
     wdef = 1.25
     #image = pygame.image.load("art/items/robes/trainee-rogues-robes.png")
@@ -48,7 +48,7 @@ class TraineeRoguesRobes(pygame.sprite.Sprite):
 
 # SWORDS
 
-class TraineeWarriorsSword(pygame.sprite.Sprite):
+class TraineeWarriorsSword(dragonengine.Item):
     name = "Trainee Warrior's Sword"
     watk = 4
     #image = pygame.image.load("art/items/weapons/swords/trainee-warriors-sword.png")
@@ -56,7 +56,7 @@ class TraineeWarriorsSword(pygame.sprite.Sprite):
 
 # SHIELDS
 
-class TraineeWarriorsShield(pygame.sprite.Sprite):
+class TraineeWarriorsShield(dragonengine.Item):
     name = "Trainee Warrior's Shield"
     wdef = 1
     #image = pygame.image.load("art/items/shields/trainee-warriors-shield.png")
@@ -64,7 +64,7 @@ class TraineeWarriorsShield(pygame.sprite.Sprite):
 
 # WANDS/STAFFS
 
-class ApprenticeMagiciansWand(pygame.sprite.Sprite):
+class ApprenticeMagiciansWand(dragonengine.Item):
     name = "Apprentice Magician's Shield"
     matk = 3
     #image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")
@@ -72,7 +72,7 @@ class ApprenticeMagiciansWand(pygame.sprite.Sprite):
 
 # DAGGERS
 
-class TraineeRoguesDaggers(pygame.sprite.Sprite):
+class TraineeRoguesDaggers(dragonengine.Item):
     name = "Trainee Rogue's Daggers"
     watk = 2.5
     #image = pygame.image.load("art/items/weapons/wands/apprentice-magicians-wand.png")
